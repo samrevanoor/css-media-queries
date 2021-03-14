@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 2fr;
+    grid-gap: 20px;
+}
+
+div {
+    font-family: Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.A, .H {
+    grid-column: 1 / 4;
+}
+
+.A {
+    background-color: peachpuff;
+}
+
+.B {
+    background-color: peru;
+}
+
+.C {
+    background-color: plum;
+}
+
+.D {
+    background-color: powderblue;
+}
+
+.E {
+    background-color: rosybrown;
+}
+
+.F {
+    background-color: olive;
+}
+
+.G {
+    background-color: mistyrose;
+}
+
+.H {
+    background-color: lightsalmon;
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        grid-template-areas:
+            "a a a a"
+            "b c d h"
+            "e f g h";
+    }
+
+    .A {
+        grid-area: a;
+    }
+
+    .B {
+        grid-area: b;
+    }
+    
+    .C {
+        grid-area: c;
+    }
+    
+    .D {
+        grid-area: d;
+    }
+    
+    .E {
+        grid-area: e;
+    }
+    
+    .F {
+        grid-area: f;
+    }
+    
+    .G {
+        grid-area: g;
+    }
+    
+    .H {
+        grid-area: h;
+    }
+}

@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 300px 100px;
+    grid-row-gap: 20px;
+}
+
+div {
+    font-family: Helvetica, sans-serif;
+}
+
+.A, .B, .C {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.A {
+    background-color: orange;
+}
+
+.B {
+    background-color: navy;
+    color: lightgray;
+}
+
+.C {
+    background-color: lemonchiffon;
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 1fr 2fr;
+        grid-row-gap: 10px;
+    }
+
+    .A {
+        grid-column: 1 / 3;
+    }
+}
